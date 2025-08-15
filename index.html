@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Henrique- Portfólio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; 
+            color: #d1d5db;
+        }
+
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; 
+        }
+
+        
+        header, main, footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="tsparticles"></div>
+
+
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Bruno Henrique</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#projects" class="text-gray-300 hover:text-white transition duration-300">Projetos</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">Sobre</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#projects" class="block text-center py-3 px-6 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-300">Projetos</a>
+            <a href="#about" class="block text-center py-3 px-6 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-300">Sobre</a>
+            <a href="#contact" class="block text-center py-3 px-6 text-gray-300 hover:bg-gray-700 hover:text-white transition duration-300">Contato</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+
+        <section id="hero" class="min-h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4 reveal">
+                    Bruno Henrique Prado
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 reveal" style="transition-delay: 200ms;">
+                    Sempre me interessei por dados e em como manipula-los para obter respostas e resolver problemas reais, além de compreender melhor o mundo.
+                </p>
+
+                <div class="flex flex-col sm:flex-row sm:justify-center items-center gap-4">
+                    <a href="#projects" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block reveal" style="transition-delay: 400ms;">
+                        Veja meus projetos
+                    </a>
+                    <a href="https://wa.me/5541999344189" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-base transition duration-300 inline-flex items-center justify-center gap-2 reveal" style="transition-delay: 600ms;">
+                        <i class="ph ph-whatsapp-logo text-xl"></i>
+                        Entre em contato
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 reveal">Projetos em Destaque</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg reveal">
+                        <img src="img/1.JPG" alt="Imagem do Projeto 1" class="w-full h-48 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagem+Indisponível';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Análise TSE 2024</h3>
+                            <p class="text-gray-400 mb-4">Uma análise de dados públicos do TSE sobre as eleições brasileiras de 2024, limpando e manipulando os dados com SQL e Pandas, para por fim criar um dashboard completo e interativo</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PowerBI</span>
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">streamlit</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://eleicoes2024-tse.streamlit.app/" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-arrow-square-out"></i> Veja a demo!
+                                </a>
+                                <a href="https://github.com/Belisarius-42/Eleicoes-2024-TSE" target="_blank" class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-github-logo"></i> Código Fonte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg reveal" style="transition-delay: 200ms;">
+                        <img src="img/2.JPG" alt="Imagem do Projeto 2" class="w-full h-48 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagem+Indisponível';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Análise exploratória de exoplanetas catalogados pela NASA</h3>
+                            <p class="text-gray-400 mb-4">Atráves de um catálogo disponibilizado em csv pela NASA, meu projeto fornece insights sobre zonas-habitáveis, tamanhos e densidades, formas de descoberta, entre muitas outras</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-orange-500/20 text-orange-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Pandas</span>
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">streamlit</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://exoplanetas-nasa-dashboard.streamlit.app/" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-arrow-square-out"></i> Veja a Demo!
+                                </a>
+                                <a href="https://github.com/Belisarius-42/ExoPlanetas---NASA" target="_blank" class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-github-logo"></i> Código Fonte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg reveal" style="transition-delay: 400ms;">
+                        <img src="img/3.JPG" alt="Imagem do Projeto 3" class="w-full h-48 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/d1d5db?text=Imagem+Indisponível';">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Olist Marketplace</h3>
+                            <p class="text-gray-400 mb-4">Uma análise da empresa Olist Marketplace entre os anos 2016 e 2018, buscando entender faturamento, produtos mais vendidos e avaliados, entre outras métricas. Feito com SQL e PoweBi</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-red-500/20 text-red-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">PowerBI</span>
+                                <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://app.powerbi.com/view?r=eyJrIjoiNjkyOTcyN2EtYTM1OC00MjMxLTg5YWYtZTUyYjI0YTU4OGMxIiwidCI6ImMzN2IzN2EzLWU5ZTItNDJmOS1iYzY3LTRiOWI3MzhlMWRmMCJ9" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-arrow-square-out"></i> Veja a Demo!
+                                </a>
+                                <a href="https://github.com/Belisarius-42/Analise-Olist-BI" target="_blank" class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-1">
+                                    <i class="ph ph-github-logo"></i> Código Fonte
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sobre Mim</h2>
+                <p class="text-lg text-gray-300 mb-4">
+                    Olá! Sou Bruno Henrique, Analista de Dados com experiência em coleta, tratamento e visualização de informações para apoiar decisões estratégicas comerciais. Atuo com SQL, Python e Power BI, transformando dados complexos em insights claros. Tenho facilidade para identificar padrões e propor melhorias baseadas em evidências obtidas, além de possuir sólida capacidade analítica e comunicação
+                </p>
+                <p class="text-lg text-gray-300">
+                    Busco constantemente aprimorar minhas habilidades em Python, SQL e ferramentas de BI. Quando não estou programando, gosto de estar lendo livros do século XIX e de fazer trilhas e escaladas.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Vamos Conversar?</h2>
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato.
+                </p>
+                <a href="mailto:bruno.prado@ufpr.br" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block mb-10">
+                    Enviar um E-mail:
+                    bruno.prado@ufpr.br
+                </a>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/Belisarius-42" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="ph ph-github-logo text-4xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bruno-henrique-prado" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="ph ph-linkedin-logo text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025, Bruno Henrique do Prado</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        window.addEventListener('load', () => {
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+                        onClick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            links: {
+                                opacity: 1
+                            }
+                        },
+                        push: {
+                            quantity: 4
+                        }
+                    }
+                },
+                particles: {
+                    color: {
+                        value: "#9ca3af" 
+                    },
+                    links: {
+                        color: "#9ca3af", 
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.2, 
+                        width: 1
+                    },
+                    collisions: {
+                        enable: true
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce"
+                        },
+                        random: false,
+                        speed: 1, 
+                        straight: false
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800
+                        },
+                        value: 60 
+                    },
+                    opacity: {
+                        value: 0.3 
+                    },
+                    shape: {
+                        type: "circle"
+                    },
+                    size: {
+                        value: { min: 1, max: 3 }
+                    }
+                },
+                detectRetina: true
+            });
+        });
+    </script>
+</body>
+</html>
